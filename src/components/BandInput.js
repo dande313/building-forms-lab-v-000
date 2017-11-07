@@ -27,17 +27,17 @@ class BandInput extends Component {
     });
   };
 
-  render() {
-
-    const bands = this.props.store.getState().bands.map((band, index) => {
-      return <li key={index}>{band}</li>
-    })
+  render(){
     return (
-      <ul>
-        {bands}
-      </ul>
+      <form onSubmit={(event) => this.handleSubmit(event)}>
+        <p>
+          <label><strong>Band </strong></label>
+            <input type="text" value={this.state.text}
+            onChange={(event) => this.handleChange(event)} />
+        </p>
+        <input type="submit" />
+      </form>
     );
   }
 };
-
 export default BandInput;
