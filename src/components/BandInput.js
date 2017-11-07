@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class BandInput extends Component {
-  
+
     constructor(props) {
     super(props);
 
@@ -26,7 +26,7 @@ class BandInput extends Component {
       text: '',
     });
   };
-  
+
   render() {
 
     const bands = this.props.store.getState().bands.map((band, index) => {
